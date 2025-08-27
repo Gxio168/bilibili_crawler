@@ -1,0 +1,30 @@
+昵称,性别,地区,评论
+GDC-刀,男,IP属地：江苏,已点赞
+雨幕菌z,保密,IP属地：北京,"评论区爬虫我没查到md5,改成了at函数，但我根据源码更改无法翻页咋回事"
+知知世一小乔,保密,IP属地：湖北,报错412的是因为请求头内没有带cookies，去f12里面把cookies扒下来放请求头里面就行了
+无敌王鳕鱼,保密,IP属地：新疆,已点赞
+屁桃猴子桃樂絲,女,IP属地：英国,已三连，求源码[给心心][给心心]
+门_皆_裂-夫,男,IP属地：中国香港,老师您好，我的项目遇到了412风控问题，先后采用过 使用代理（科学上网），使用cookies （SESSDATA），以及 AI给出的 使用blivedm办法，但是仍然无法完整爬取到所有弹幕，丢失非常严重，弹幕显示间隔也很长，有时甚至间隔数十分钟没有检测到弹幕（哪怕是非常火爆的直播间），而同样一套代码几天前使用的时候效果就比现在好，请问是否是风控过严导致IP被限制，还是其他问题？而且我的开发项目中使用的bilibili-api是0.1.1版本，这是pip所能安装的最新版本（但是它本身也是非常老旧的版本），导致代码中很多接口和函数不匹配，请问是否有解决的办法？谢谢！@松鼠爱吃饼干
+宇辰book,男,IP属地：福建,已三连，求源代码[给心心]
+摸鱼暗天帝,保密,IP属地：上海,以点赞
+bili_13572481539,保密,IP属地：陕西,已三连求码源
+云雾城,保密,IP属地：山西,以三连，求源码
+不厌闲,男,IP属地：江西,已三连 求源代码
+嘻呵嘿哈嘎,保密,IP属地：浙江,爬虫区up主[doge_金箍]
+我还真就纳了闷了,男,IP属地：陕西,已点赞已三连
+2628汉都,保密,IP属地：广东,已点赞[脱单doge][喜欢][喜欢]
+bili阿白羽毛,保密,IP属地：安徽,"'https://upos-sz-estgoss.bilivideo.com/upgcxcode/81/52/717385281/717385281_nb2-1-30280.m4s?e=ig8euxZM2rNcNbdlhoNvNC8BqJIzNbfqXBvEqxTEto8BTrNvN0GvT90W5JZMkX_YN0MvXg8gNEV4NC8xNEV4N03eN0B5tZlqNxTEto8BTrNvNeZVuJ10Kj_g2UB02J0mN0B5tZlqNCNEto8BTrNvNC7MTX502C8f2jmMQJ6mqF2fka1mqx6gqj0eN0B599M=&os=upos&og=cos&trid=e8c2cf463f0848eba5abd747556cd6fu&mid=0&gen=playurlv3&nbs=1&uipk=5&platform=pc&oi=0x24098a300e123bb07df71c0e3e507ae0&deadline=1754468596&upsig=ade262b3b4d8605e9e06e4e377922153&uparams=e,os,og,trid,mid,gen,nbs,uipk,platform,oi,deadline&bvc=vod&nettype=0&bw=319243&agrr=1&buvid=&build=0&dl=0&f=u_0_0&orderid=0,3'这个音频传递了User-Agent和Cookie,怎么访问还是403"
+携星辰向曙光,男,IP属地：福建,为什么爬出来的html没有<script>window.__playinfo__=(.＊?)</script>这个东西
+永不迷失的梦,保密,IP属地：湖北,已三连，求源代码[脱单doge]
+布拉德福不服,保密,IP属地：中国台湾,已点赞 求源码
+Yuuki100,女,IP属地：江西,已点赞 求源码[给心心]
+硼铑四重键,男,IP属地：安徽,"def get_cid(bvid):
+    url =  f""https://api.bilibili.com/x/player/pagelist?bvid={bvid}&jsonp=jsonp""
+    headers = {
+        ""User-Agent"": ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ""
+                      ""Chrome/125.0.0.0 Safari/537.36"",
+        ""Referer"": f""https://www.bilibili.com/video/{bvid}""
+    }
+    resp = requests.get(url, headers=headers).text  # 添加Header
+    return re.search(r'""cid""\s*:\s*(\d+)', resp).group(1)
+这个函数可以直接获得oid"
