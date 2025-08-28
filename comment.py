@@ -5,7 +5,6 @@ from urllib.parse import urlencode
 import csv
 
 
-
 def get_comment():
     f = open("data.csv", mode="a", encoding="utf-8", newline="")
     csv_writer = csv.DictWriter(f, fieldnames=["昵称", "性别", "地区", "评论"])
@@ -15,7 +14,7 @@ def get_comment():
     resp = get_response(url, params)
     json_data = resp.json()
     info_list = []
-    for i in range(1):
+    for i in range(50):
         replies = json_data["data"]["replies"]
         offset = json_data["data"]["cursor"]["pagination_reply"]["next_offset"]
         for reply in replies:
