@@ -4,7 +4,7 @@ from w_rid import get_query_with_wrid
 
 
 def get_comment(oid, dir):
-    f = open(dir + "data.csv", mode="a", encoding="utf-8", newline="")
+    f = open(dir, mode="a", encoding="utf-8", newline="")
     csv_writer = csv.DictWriter(f, fieldnames=["昵称", "性别", "地区", "评论"])
     csv_writer.writeheader()
     url = "https://api.bilibili.com/x/v2/reply/wbi/main"
