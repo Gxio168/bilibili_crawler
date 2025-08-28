@@ -5,7 +5,7 @@ import os
 from moviepy import VideoFileClip, AudioFileClip
 
 
-def get_video(bvid, cid):
+def get_video(bvid, cid, dir):
     url = "https://api.bilibili.com/x/player/wbi/playurl"
     params = {
         "bvid": bvid,
@@ -26,7 +26,7 @@ def get_video(bvid, cid):
     merge_audio_video_from_binary(
         video_binary=video_content,
         audio_binary=audio_content,
-        output_path=".\\video\\" + bvid + ".mp4",
+        output_path=dir + bvid + ".mp4",
     )
 
 
@@ -66,7 +66,7 @@ def merge_audio_video_from_binary(
         final_clip.write_videofile(
             output_path,
             fps=video_clip.fps,  # 使用原视频的帧率
-            threads=4              # 可选：设置使用的线程数
+            threads=4,  # 可选：设置使用的线程数
         )
 
         # 重要：显式关闭剪辑对象，释放资源（特别是文件句柄）

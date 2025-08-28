@@ -1,17 +1,15 @@
 from response import get_response
-import time
-import hashlib
-from urllib.parse import urlencode
 import csv
+from w_rid import get_query_with_wrid
 
 
-def get_comment():
-    f = open("data.csv", mode="a", encoding="utf-8", newline="")
+def get_comment(oid, dir):
+    f = open(dir + "data.csv", mode="a", encoding="utf-8", newline="")
     csv_writer = csv.DictWriter(f, fieldnames=["昵称", "性别", "地区", "评论"])
     csv_writer.writeheader()
     url = "https://api.bilibili.com/x/v2/reply/wbi/main"
-    params = get_params(oid="1153355619", offset="", wts=int(time.time()))
-    resp = get_response(url, params)
+    params = get_params(oid=oid, offset="")
+    resp = get_response(url=url, data=params)
     json_data = resp.json()
     info_list = []
     for i in range(50):
@@ -27,13 +25,13 @@ def get_comment():
             info_list.append(dit)
         csv_writer.writerows(info_list)
         info_list = []
-        params = get_params(oid="1153355619", offset=offset, wts=int(time.time()))
+        params = get_params(oid=oid, offset=offset)
         resp = get_response(url, params)
         json_data = resp.json()
     f.close()
 
 
-def get_params(oid, offset, wts):
+def get_params(oid, offset):
     template = {
         "mode": "2",
         "oid": f"{oid}",
@@ -42,15 +40,5 @@ def get_params(oid, offset, wts):
         "seek_rpid": "",
         "type": "1",
         "web_location": "1315875",
-        "wts": f"{wts}",
     }
-    w_rid = get_w_rid(template)
-    template["w_rid"] = w_rid
-    return template
-
-
-def get_w_rid(params):
-    md5_hash = hashlib.md5()
-    query_string = urlencode(params) + "ea1db124af3c7062474693fa704f4ff8"
-    md5_hash.update(query_string.encode("utf-8"))
-    return md5_hash.hexdigest()
+    return get_query_with_wrid(template)
