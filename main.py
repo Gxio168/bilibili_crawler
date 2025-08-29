@@ -9,8 +9,8 @@ def main():
     FANJU_DIR_PATH = "./source/video/"
     COMMENT_FILE_PATH = "./source/data.csv"
     # get_video(bvid="BV1bvejzAEkW", cid=31902666654, dir=VIDEO_DIR_PATH)
-    # get_comment(oid=115099402573006, dir=COMMENT_FILE_PATH)
-    get_fanju(cid=31422810067, dir=FANJU_DIR_PATH)
+    # get_comment(oid="115099402573006", dir=COMMENT_FILE_PATH)
+    get_fanju(cid="31422810067", dir=FANJU_DIR_PATH)
 
 
 if __name__ == "__main__":
